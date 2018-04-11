@@ -23,6 +23,8 @@ for (let j = 0; j <16 ; j++) {
     let para2 = document.createElement("i");
     para2.classList.add("fa");
     para2.classList.add(newList[j]);
+    para.appendChild(para2);
+    deck.appendChild(para);
 };
 
 // Shuffle function from http://stackoverflow.com/a/2450976
