@@ -17,6 +17,14 @@ newList = shuffle(list);
 let deck = document.getElementsByClassName("deck")[0]
 deck.innerHTML = "";
 
+for (let j = 0; j <16 ; j++) {
+    let para = document.createElement("li");
+    para.classList.add("card");
+    let para2 = document.createElement("i");
+    para2.classList.add("fa");
+    para2.classList.add(newList[j]);
+};
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
