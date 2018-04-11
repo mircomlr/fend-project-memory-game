@@ -1,11 +1,9 @@
 /* Variables*/
 let newList = [];
 
-
 /*
  * Create a list that holds all of your cards
  */
-
 let list = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube", "fa-leaf", "fa-bicycle", "fa-bomb", "fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube", "fa-leaf", "fa-bicycle", "fa-bomb"];
 
 /*
@@ -14,10 +12,10 @@ let list = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube",
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
-
 newList = shuffle(list);
-console.log(newList);
 
+let deck = document.getElementsByClassName("deck")[0]
+deck.innerHTML = "";
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
