@@ -109,9 +109,11 @@ function matchFunction() {                                                      
       matchedGameFields = document.getElementsByClassName("match");
       if (matchedGameFields.length == 16) {                                     /* if all cards match game ends */
           clearInterval(myTimer);
-          alert("Congratulations! Do you want to play again (Press reload button.)? The time for you winning the game is " + sec + " sec..Your star-rating is: " + document.getElementsByClassName("fa-star").length);
+          let conf = confirm("Congratulations! Do you want to play again? If yes,press [OK]! The time for you winning the game is " + sec + " sec..Your star-rating is: " + document.getElementsByClassName("fa-star").length);
+          if (conf == true) {
+            restart();
+          };
       }
-
       openCardsList = [];
       for (let m =0; m < 16; m++){
       let card = document.getElementsByClassName("card")[m]
